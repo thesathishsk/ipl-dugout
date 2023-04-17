@@ -23,7 +23,13 @@ export const TeamPage=()=>{
     if(!team || !team.teamName){
         return <h2>404 Team Not Found</h2>;
     }
- 
+let firstYear=2022;
+    if(team.teamName==="Deccan Chargers"){
+        firstYear=2008;
+    }
+    else{
+        firstYear=2022;
+    }
 
 
 
@@ -32,8 +38,14 @@ export const TeamPage=()=>{
 
 
     return(
+        <div className='starting'><span className='backbutton'><Link to={`/home/teams`}>back</Link></span>
        <div className='TeamPage'>
-       <div className='team-name-section'> <h1 className='team-name'>{team.teamName}</h1></div>
+        
+       <div className='team-name-section'> 
+       
+       <h1 className='team-name'>{team.teamName}</h1>
+       
+       </div>
        <div className='win-loss-section'>
        <PieChart
             data={[
@@ -50,9 +62,10 @@ export const TeamPage=()=>{
         </div>
         {team.matches.slice(1).map(match => < MatchCardSmall teamName={team.teamName} match={match} />)}
         <div className='more-match'>
-            <Link to={`matches/2020`}>
+            <Link to={`matches/${firstYear}`}>
             More Matches></Link>
             </div>
+       </div>
        </div>
     );
 }

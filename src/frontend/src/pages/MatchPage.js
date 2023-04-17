@@ -19,9 +19,23 @@ export const MatchPage=()=>{
                     } ,[teamName,year]
                 );
 
-    if(match.length===0){
-        return <h2>No Matches Avialablle</h2>
+
+                let firstYear=2022;
+    if(teamName==="Deccan Chargers"){
+        firstYear=2008;
     }
+    else{
+        firstYear=2022;
+    }
+
+    if(match.length===0){
+        return(<div className='exception'>
+            <h1 className='nodata'>No Match Data Avialable for selected year</h1>
+            <h3 className='backbuttonexception'><Link to={`/home/teams/${teamName}/matches/${firstYear}`}>back</Link></h3>
+             
+            </div>);
+    }
+
 
     if(!match){
         return <h2>error</h2>;
@@ -37,6 +51,8 @@ export const MatchPage=()=>{
             <div className='leftside'>
             
                <h2>Select Year</h2>
+               <div className='d'> <a href='../matches/2022'> 2022 </a></div>
+               <div className='d'><a href='../matches/2021'> 2021 </a></div>
               <div className='d'> <a href='../matches/2020'> 2020 </a></div>
                <div className='d'><a href='../matches/2019'> 2019 </a></div>
                <div className='d'><a href='../matches/2018'> 2018 </a></div>
