@@ -1,0 +1,18 @@
+.App {
+  text-align:left;
+  padding:20px;
+}
+.won-card{
+  background-color: green;
+  border: 1px solid rgba(4, 242, 40, 0.25);
+    border-radius: 5px;
+    background-color: rgba(4, 242, 40, 0.45);
+   
+}
+.lost-card{
+  background-color: red;
+  border: 1px solid rgba(251, 3, 3, 0.25);
+    border-radius: 5px;
+    background-color: rgba(251, 3, 3, 0.45);
+    
+}

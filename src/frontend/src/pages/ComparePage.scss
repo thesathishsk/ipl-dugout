@@ -1,0 +1,67 @@
+.ComparePage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    .back{
+        grid-column: span 7;
+    }
+    .ComparepageTeams{
+        text-align: right;
+    }
+.summa{
+    background-color: #282c34;
+}
+    .bigbox{
+        align-self: center;
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        background-color: aqua;
+        .leftside{
+            width: 60%;
+            height:70%;
+            background-color:rgb(209, 138, 138);
+            justify-self: center;
+            text-align: center;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius:10px;
+        }
+        .rightside{
+            width: 60%;
+            height:70%;
+            background-color:rgb(99, 43, 43);
+            justify-self: center;
+            text-align: center;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius:10px;
+        }
+        .submit{
+            width:150px;
+            height:20px;
+            background-color:rgb(53, 53, 247);
+            border-radius: 30px;
+            padding: 20px;
+            margin-left: 90%;
+            text-align: center;
+        }
+
+    }
+    .comparebox{
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .compareleft{
+            height: fit-content;
+            width: 100%;
+            background-color: rgb(254, 242, 77);
+        }
+        .compareright{
+            height:fit-content;
+            width: 100%;
+            background-color: chocolate;
+        }
+    }
+}

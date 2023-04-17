@@ -1,0 +1,12 @@
+.teams{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 25px;
+    &>div{
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+    }
+}
