@@ -51,6 +51,8 @@ export const MatchPage=()=>{
             <div className='leftside'>
             
                <h2>Select Year</h2>
+               <div className='d'> <a href='../matches/2024'> 2024 </a></div>
+               <div className='d'> <a href='../matches/2023'> 2023 </a></div>
                <div className='d'> <a href='../matches/2022'> 2022 </a></div>
                <div className='d'><a href='../matches/2021'> 2021 </a></div>
               <div className='d'> <a href='../matches/2020'> 2020 </a></div>

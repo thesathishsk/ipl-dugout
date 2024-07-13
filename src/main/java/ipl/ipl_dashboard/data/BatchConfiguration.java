@@ -29,9 +29,9 @@ public class BatchConfiguration {
 public FlatFileItemReader<matchData> reader() {
   return new FlatFileItemReaderBuilder<matchData>()
     .name("matchData")
-    .resource(new ClassPathResource("IPL Matches 2008-2020.csv"))
+    .resource(new ClassPathResource("matches.csv"))
     .delimited()
-    .names(new String[]{"id","city","date","player_of_match","venue","neutral_venue","team1","team2","toss_winner","toss_decision","winner","result","result_margin","eliminator","method","umpire1","umpire2"})
+    .names(new String[]{"id","city","date","player_of_match","venue","team1","team2","toss_winner","toss_decision","winner","result","result_margin","eliminator","method","umpire1","umpire2"})
     .fieldSetMapper(new BeanWrapperFieldSetMapper<matchData>() {{
       setTargetType(matchData.class);
     }})
